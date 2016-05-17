@@ -25,14 +25,17 @@
             foreach ($fields as $fieldkey => $field)
             {
                 //Controls::AddTextBox($label, $name, $value); => DbField.php
-//                echo '<pre>';
-//                print_r($field);
-//                echo '</pre>';
+                echo '<pre>';
+                print_r($field);
+                echo '</pre>';
+
+//                echo 'dupa<br>';
+//                var_dump($field->IsAutomatic());
 //
-                //if ($field->IsAutomatic() {
+                if (!$field->IsAutomatic()) {
                     $result .= '<div>' . Controls::AddTextBox($field->GetFieldName(),
                             $field->GetFieldName(), $field->GetValue()) . '</div>'; //get field name, getfieldlabel, getfieldvalue
-                //}
+                    }
             }
 
             $result .= '</div>';

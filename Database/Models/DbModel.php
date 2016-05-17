@@ -7,7 +7,6 @@ class DbModel implements IDbModel
         protected $fields = array ();
 
 
-
         public function GetFields()
         {
             return $this -> fields;
@@ -27,8 +26,6 @@ class DbModel implements IDbModel
         public function Set($fieldName, $fieldValue)
         {
             $this -> fields[$fieldName]->Set($fieldName, $fieldValue);
-
-
         }
 
 
