@@ -17,7 +17,7 @@
                 self::PASSWORD => new DbField(self::PASSWORD),
             );
 
-            $this->tableName = 'users';
+            $this->tableName = 'users'; 
         }
 
     }
