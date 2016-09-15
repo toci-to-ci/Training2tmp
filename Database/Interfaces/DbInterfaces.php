@@ -60,3 +60,8 @@ interface IDisplayData(IDbModel $model);
 {
     public function Display();
 }
+
+interface ISqlCommon(IDbModel $model);
+{
+    public function SqlCommon();
+}
