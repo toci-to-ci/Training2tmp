@@ -40,6 +40,7 @@ class DbField implements IDbField
     public function IsAutomatic()
     {
         //zadanie domowe
+        //TODO: hasValue ustaw na true jesli pole != null
         return false;
         //? ?? jakieś $field value == null ?
     }

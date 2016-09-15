@@ -56,12 +56,12 @@ interface ISqlWhere
     public function Where(IDbModel $model);
 }
 
-interface IDisplayData(IDbModel $model);
+interface IDisplayData
 {
-    public function Display();
+    public function Display(IDbModel $model);
 }
 
-interface ISqlCommon(IDbModel $model);
+interface ISqlCommon
 {
-    public function SqlCommon();
+    public function SqlCommon(IDbModel $model);
 }

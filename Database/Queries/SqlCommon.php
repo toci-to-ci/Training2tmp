@@ -9,7 +9,7 @@ abstract class SqlCommon implements ISqlCommon
     //TODO: insert, select, update i delete zawsze
     //TODO: będą miały wspólne elementy, jak nazwy pól,
     //TODO: to powinno zostac gdzieś wyżej zaimplementowane
-    //TODO: przed klasą specjalizowaną (p: PostgreSqlInsert
+    //TODO: przed klasą specjalizowaną (np: DbInsert/PostgreSqlInsert
     //TODO: jako np SqlCommon.php
 
 
@@ -36,6 +36,7 @@ abstract class SqlCommon implements ISqlCommon
 
     }
 
+    //TODO: GetValues dla selecta nie potrzebuje surroundings
     protected function GetValues(IDbModel $model)
     {
         $fields = $model->GetFields();

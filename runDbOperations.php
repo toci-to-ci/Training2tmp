@@ -2,10 +2,12 @@
 
     require_once './Database/Interfaces/DbInterfaces.php';
 
-    require_once './Database/DbModel.php';
-    require_once './Database/UsersModel.php';
+    require_once './Database/Models/DbModel.php';
+    require_once './Database/Models/Databases/TableModels/UsersModel.php';
 
-    require_once './Database/DbField.php';
+    require_once './Database/Models/DbField.php';
+
+    require_once  './Database/Queries/SqlCommon.php';
     require_once './Database/Queries/DbInsert.php';
 
     require_once './Database/DbHandlers/DbHandle.php';
@@ -15,6 +17,8 @@
 
 
 //to kopiujemy do Crudgeneratora
+
+//TODO: nie można powołac klasy
 $insert = new PostgreSqlInsert();
 $model = new UsersModel();
 

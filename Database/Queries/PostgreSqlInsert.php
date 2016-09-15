@@ -1,7 +1,19 @@
 <?php
-    class PostgreSqlInsert extends DbInsert
+     class PostgreSqlInsert extends DbInsert
     {
-        public function Insert(IDbModel $model)
+
+//        {
+//         parent::__construct($model);
+//        }
+
+   // public abstract function SqlCommon (IDbModel $model);
+
+    public function SqlCommon(IDbModel $model)
+    {
+        parent::__construct($model);
+    }
+
+    public function Insert(IDbModel $model)
         {
             $fields = $model->GetFields();
 

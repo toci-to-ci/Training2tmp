@@ -5,11 +5,11 @@
     require_once './Database/DbHandlers/DbHandle.php';
     require_once './Database/DbHandlers/PostgreSqlDbHandle.php';
 
-    require_once './Database/DbModel.php';
+    require_once './Database/Models/DbModel.php';
 
 
-require_once './Database/DbField.php';
-require_once './Database/UsersModel.php';
+require_once './Database/Models/DbField.php';
+require_once './Database/Models/Databases/TableModels/UsersModel.php';
 
 
 $ob = new PostgreSqlDbHandle(); var_dump($ob);
