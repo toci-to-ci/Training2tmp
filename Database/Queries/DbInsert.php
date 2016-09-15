@@ -6,6 +6,13 @@
             'string' => "'",
             'int' => '',   );
 
+        //TODO: insert, select, update i delete zawsze
+        //TODO: będą miały wspólne elementy, jak nazwy pól,
+        //TODO: to powinno zostac gdzieś wyżej zaimplementowane
+        //TODO: przed klasą specjalizowaną (p: PostgreSqlInsert
+        //TODO: jako np SqlCommon.php
+
+
         /**
          * @param IDbModel $model
          * @return mixed
@@ -17,7 +24,8 @@
             $fields = $model->GetFields();
             $names = array ();
 
-            foreach ($fields as $fieldKey => $fieldValue) //$fieldValue to nasz IDbField
+            //$fieldValue to nasz IDbField
+            foreach ($fields as $fieldKey => $fieldValue)
             {
                 if ($fieldValue->HasValue()) {
                     $names[] =  $fieldValue->GetFieldName();
@@ -33,12 +41,14 @@
             $fields = $model->GetFields();
             $values = array ();
 
-            foreach ($fields as $fieldKey => $fieldValue) //$fieldValue to nasz IDbField
+            //$fieldValue to nasz IDbField
+            foreach ($fields as $fieldKey => $fieldValue)
             {
                 if ($fieldValue->HasValue()) {
 
                   //  var_dump($fieldValue->GetType());
-                    $values[] = $this->surroundings[$fieldValue->GetType()] . $fieldValue->GetValue() .
+                    $values[] = $this->surroundings[$fieldValue->GetType()] .
+                        $fieldValue->GetValue() .
                         $this->surroundings[$fieldValue->GetType()];
                 }
 

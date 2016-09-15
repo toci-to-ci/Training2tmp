@@ -1,0 +1,10 @@
+//<script type='application/ld+json'>
+{
+  "dbName" : "db_toci",
+  "tables": [
+    "users",
+    "functions", //funkcje użytkowników - wrzucić do słowników
+    "dictionary" //tabela słowników do drop list, tłumaczeń UXów np na inne języki, itp
+  ]
+}
+// TODO: włączyć w obieg

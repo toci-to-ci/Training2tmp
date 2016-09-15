@@ -1,6 +1,6 @@
 <?php
-
-class DbField implements IDbField //kolumna tabelki w db
+//kolumna tabelki w db
+class DbField implements IDbField
 {
     protected $fieldName; //przechowuje nazwę pola
     protected $fieldValue; //przechowuje wartość pola
@@ -15,25 +15,21 @@ class DbField implements IDbField //kolumna tabelki w db
     {
         $this->fieldName = $fieldName;
         $this->fieldValue = $fieldValue;
-
     }
-
-    public function GetType() //string / text / int //przechowuje typ pola
+    //string / text / int //przechowuje typ pola
+    public function GetType()
     {
         return gettype($this->fieldValue);
-
     }
 
     public function GetValue() //beatka
     {
         return $this->fieldValue;
-
     }
-
-    public function GetFieldName() // name    - nazwa pola bazy danych
+    // name    - nazwa pola bazy danych
+    public function GetFieldName()
     {
         return $this->fieldName;
-
     }
 
     public function HasValue()
@@ -45,9 +41,7 @@ class DbField implements IDbField //kolumna tabelki w db
     {
         //zadanie domowe
         return false;
-
         //? ?? jakieś $field value == null ?
-
     }
 
 }

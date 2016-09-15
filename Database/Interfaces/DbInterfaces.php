@@ -4,9 +4,7 @@
 interface IDbHandle
 {
     public function Connect();
-
     public function RunQuery($query);
-
 }
 
 
@@ -46,4 +44,19 @@ interface ISqlInsert
      * @return mixed
      */
     public function Insert(IDbModel $model);
+}
+
+interface ISqlSelect
+{
+    public function Select(IDbModel $model);
+}
+
+interface ISqlWhere
+{
+    public function Where(IDbModel $model);
+}
+
+interface IDisplayData(IDbModel $model);
+{
+    public function Display();
 }

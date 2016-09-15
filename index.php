@@ -12,7 +12,7 @@
     require_once './Database/DbHandlers/DbHandle.php';
     require_once './Database/DbHandlers/PostgreSqlDbHandle.php';
 
-    require_once './Database/PostgreSqlInsert.php';
+    require_once './Database/Queries/PostgreSqlInsert.php';
 
 //
     require_once './Front/Controls.php';

@@ -1,7 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ICE
- * Date: 2016-09-15
- * Time: 11:09
- */
+    abstract class DbWhere implements ISqlWhere
+    {
+        protected $whereCommand = '';
+
+        public abstract function Where(IDbModel $model);
+
+    }

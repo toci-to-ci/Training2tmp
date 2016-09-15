@@ -1,5 +1,6 @@
 <?php
-    class DbModel implements IDbModel //tabelka w bazie danych
+//tabelka w bazie danych
+class DbModel implements IDbModel
     {
         protected $tableName;
         protected $values;

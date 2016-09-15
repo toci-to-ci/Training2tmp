@@ -14,7 +14,6 @@
             //$result = '<form method="POST" action="'.$_SERVER['PHP_SELF'].'"> <div>';
 
             $result = '<form method="POST" action="'.$_SERVER['PHP_SELF'].'"> <div>';
-
             $result .= Controls::AddHidden(self::MODEL_TYPE, get_class($model) );
 
             foreach ($fields as $fieldkey => $field)
