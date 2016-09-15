@@ -4,9 +4,7 @@
         protected  $insertCommand = 'INSERT INTO ';
         protected  $surroundings = array(
             'string' => "'",
-            'int' => '',
-
-        );
+            'int' => '',   );
 
         /**
          * @param IDbModel $model
@@ -26,8 +24,6 @@
                 }
 
             }
-
-          //  var_dump($names);
             return $names;
 
         }
@@ -42,12 +38,13 @@
                 if ($fieldValue->HasValue()) {
 
                   //  var_dump($fieldValue->GetType());
-                    $values[] = $this->surroundings[$fieldValue->GetType()] . $fieldValue->GetValue() . $this->surroundings[$fieldValue->GetType()];
+                    $values[] = $this->surroundings[$fieldValue->GetType()] . $fieldValue->GetValue() .
+                        $this->surroundings[$fieldValue->GetType()];
                 }
 
             }
 
-              var_dump($values);
+            var_dump($values);
             return $values;
 
         }

@@ -1,6 +1,6 @@
 <?php
-
-//połaczenie i uruchomienie zapytania
+//1.
+//połaczenie z db i uruchomienie zapytania /2/ 00:02:00
 interface IDbHandle
 {
     public function Connect();
@@ -9,23 +9,23 @@ interface IDbHandle
 
 }
 
-interface IDbField  //z DbQueries.php foreach ($fields as $fieldKey => $fieldValue)
+
+//4. tworzymy klasy z których pól (atrybutów)
+// bedziemy mogli wydedukowac zapytnia
+//z DbInsert.php
+// foreach ($fields as $fieldKey => $fieldValue)
+interface IDbField
 {
     public function GetType(); //string / text
-
     public function GetValue(); //beatka
-
-    public function GetFieldName(); // name    - nazwa pola bazy danych
-
+    public function GetFieldName(); // name, login, password    - nazwa pola bazy danych...
     public function Set($fieldName, $fieldValue);
-
-    public function HasValue();
-
-    public function IsAutomatic();
+    public function HasValue(); //puste , nie puste
+    public function IsAutomatic(); //
 
 
 }
-
+//4.a
 interface IDbModel
 {
     /**
@@ -38,7 +38,7 @@ interface IDbModel
     public function HasField($fieldName);
 
 }
-
+// 4.b
 interface ISqlInsert
 {
     /**

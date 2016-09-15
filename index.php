@@ -7,10 +7,10 @@
     require_once './Database/UsersModel.php';
 
     require_once './Database/DbField.php';
-    require_once './Database/DbQueries.php';
+    require_once './Database/Queries/DbInsert.php';
 
-    require_once './Database/DbHandle.php';
-    require_once './Database/PostgreSqlDbHandle.php';
+    require_once './Database/DbHandlers/DbHandle.php';
+    require_once './Database/DbHandlers/PostgreSqlDbHandle.php';
 
     require_once './Database/PostgreSqlInsert.php';
 

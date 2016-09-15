@@ -1,4 +1,5 @@
 <?php
+//3.
 class PostgreSqlDbHandle extends DbHadle
 {
 
@@ -23,11 +24,7 @@ class PostgreSqlDbHandle extends DbHadle
 
     public function RunQuery($query)
     {
-
         $resource = pg_query($this->connectionHandle, $query);
-
-           // var_dump($this->$query);
-
         $result = pg_fetch_array($resource);
 
         return $result;

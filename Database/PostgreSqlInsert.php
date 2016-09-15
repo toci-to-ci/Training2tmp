@@ -5,16 +5,9 @@
         {
             $fields = $model->GetFields();
 
-
             //insert into users (name, login, password) Values ('myname', 'mylogin' , 'mypassword');
-
-
             $names = $this -> GetNames($model);
             $valuesInSurroundings = $this->GetValues($model);
-
-
-//            $insert = $this->insertCommand . $model->GetTableName() .
-//                ' (' . implode(', ', $names) . ') values (';
 
             $insert = $this->insertCommand . $model->GetTableName() .
                 ' (' . implode(', ', $names) . ') values(' .implode(', ',$valuesInSurroundings). ');'
