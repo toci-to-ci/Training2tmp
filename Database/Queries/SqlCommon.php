@@ -5,9 +5,11 @@ abstract class SqlCommon implements ISqlCommon
     protected  $surroundings = array(
         'string' => "'",
         'int' => '',   );
+    //TODO: PYTANIE: do operacji sql potrzeba 'surroundings'
+    //TODO: jak się ich pozbbyć przy tworzeniu list [view] z selecta?
 
     //TODO: insert, select, update i delete zawsze
-    //TODO: będą miały wspólne elementy, jak nazwy pól,
+    //TODO: będą miały wspólne elementy, jak nazwy tabel i pól,
     //TODO: to powinno zostac gdzieś wyżej zaimplementowane
     //TODO: przed klasą specjalizowaną (np: DbInsert/PostgreSqlInsert
     //TODO: jako np SqlCommon.php
