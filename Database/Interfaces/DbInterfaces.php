@@ -19,7 +19,7 @@ interface IDbField
     public function GetFieldName(); // name, login, password    - nazwa pola bazy danych...
     public function Set($fieldName, $fieldValue);
     public function HasValue(); //puste , nie puste
-    public function IsAutomatic(); //
+    public function IsAutomatic($field); //
 
 
 }

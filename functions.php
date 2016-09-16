@@ -11,3 +11,13 @@ function drk ($x)
     echo '<pre>';print_r ($x);echo '</pre>';
 }
 
+function dump ($x)
+{
+    var_dump($x);
+}
+
+
+function cl ()
+{
+    echo '<br>'. __CLASS__.'<br>';
+}

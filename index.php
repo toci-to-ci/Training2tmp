@@ -22,9 +22,19 @@
     require_once './Front/Controls.php';
     require_once './Front/CrudGenerator.php';
 
-echo 'dziala';
+//echo 'dziala';
 
 
 $crudGenerator = new CrudGenerator();
+
+//$model = new UsersModel();
+//$model->Set(UsersModel::LOGIN,'piotrek login');
+//$model->Set(UsersModel::PASSWORD,'piotrek 100 pass');
+//$model->Set(UsersModel::NAME,'piołtrek 1000 name');
+
+
 echo $crudGenerator->GenerateForm(new UsersModel());
+
+
+
 echo $crudGenerator->SaveData();

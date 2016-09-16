@@ -4,6 +4,7 @@ class DbField implements IDbField
 {
     protected $fieldName; //przechowuje nazwę pola
     protected $fieldValue; //przechowuje wartość pola
+    protected $field=false; //
 
     public function __construct($fieldName)
     {
@@ -37,12 +38,16 @@ class DbField implements IDbField
         return !is_null($this->fieldValue);
     }
 
-    public function IsAutomatic()
+    public function IsAutomatic($field)
     {
         //zadanie domowe
         //TODO: hasValue ustaw na true jesli pole != null
-        return false;
+      //  return false;
         //? ?? jakieś $field value == null ?
+        if ($field != '' || $field != 'null')
+        {
+            return true;
+        }
     }
 
 }

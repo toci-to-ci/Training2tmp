@@ -1,5 +1,7 @@
 <?php
-    class CrudGenerator
+
+
+    class CrudGenerator extends DbModel
     {
 
         const MODEL_TYPE='ModelType';
@@ -7,6 +9,10 @@
         public function GenerateForm(IDbModel $model)
         {
             $fields = $model -> GetFields();
+
+            echo '<pre>';
+            print_r($fields);
+            echo '</pre>';
 
             $result = ''; //tu pchamy HTMLa, kt uzupełniamy w foreach-u
             //samo rozstrzyga czy to textbox, checkbox itp..
@@ -19,11 +25,14 @@
             foreach ($fields as $fieldkey => $field)
             {
                 //Controls::AddTextBox($label, $name, $value); => DbField.php
-
-                if (!$field->IsAutomatic()) {
+                echo '<pre>';
+                print_r($field);
+                echo '</pre>';
+//
+                //if ($field->IsAutomatic() {
                     $result .= '<div>' . Controls::AddTextBox($field->GetFieldName(),
                             $field->GetFieldName(), $field->GetValue()) . '</div>'; //get field name, getfieldlabel, getfieldvalue
-                }
+                //}
             }
 
             $result .= '</div>';

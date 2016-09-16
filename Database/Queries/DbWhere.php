@@ -1,7 +1,7 @@
 <?php
-    abstract class DbWhere implements ISqlWhere
+    abstract class DbWhere extends DbSelect
     {
-        protected $whereCommand = '';
+        protected $whereCommand = 'WHERE ';
 
         public abstract function Where(IDbModel $model);
 
