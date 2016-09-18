@@ -59,6 +59,7 @@
                 //utwożony w ten sposób obiekt należy uzupełnic SETem (DbModel.php ma Set ($fieldName, %fieldValue)
 
                 foreach ($_POST as $key => $value)
+                
                 {
                     if ($model->HasField($key))
                     {
