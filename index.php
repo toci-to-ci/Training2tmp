@@ -1,6 +1,6 @@
 <?php
 
-
+    require_once  './functions.php';
     require_once './Database/Interfaces/DbInterfaces.php';
 
     require_once './Database/Models/DbModel.php';
@@ -27,6 +27,9 @@
 
 $crudGenerator = new CrudGenerator();
 
+drk($crudGenerator);
+
+
 //$model = new UsersModel();
 //$model->Set(UsersModel::LOGIN,'piotrek login');
 //$model->Set(UsersModel::PASSWORD,'piotrek 100 pass');
@@ -35,6 +38,8 @@ $crudGenerator = new CrudGenerator();
 
 echo $crudGenerator->GenerateForm(new UsersModel());
 
+drk($crudGenerator);
+//echo $crudGenerator->SaveData();
 
-
-echo $crudGenerator->SaveData();
+$ob = new UsersModel();
+drk ($ob);

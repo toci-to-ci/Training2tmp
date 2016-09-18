@@ -2,21 +2,13 @@
       class PostgreSqlInsert extends DbInsert
     {
 
-//        {
-//         parent::__construct($model);
-//        }
 
      public function SqlCommon (IDbModel $model)
      {
 
      }
 
-//    public function SqlCommon(IDbModel $model)
-//    {
-//        parent::__construct($model);
-//        //TODO: do jakiego konstruktora się odwołuje w DbInsert nie ma konstruktora
-//        //TODO: PYTANIE: parent skacze wyżej niż 1 poziom ?
-//    }
+
 
     public function Insert(IDbModel $model)
         {

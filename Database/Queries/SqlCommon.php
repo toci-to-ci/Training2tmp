@@ -4,7 +4,7 @@ abstract class SqlCommon implements ISqlCommon
 
     protected  $surroundings = array(
         'string' => "'",
-        'int' => '',   );
+        'int' => "",   );
     //TODO: PYTANIE: do operacji sql potrzeba 'surroundings'
     //TODO: jak się ich pozbbyć przy tworzeniu list [view] z selecta?
 

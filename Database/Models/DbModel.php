@@ -37,4 +37,13 @@ class DbModel implements IDbModel
             return isset($this->fields[$fieldName]);
         }
 
+
+        //próba dazenia do automatic model z configa
+        //DbLists
+        public function ConfigSetTableName($value)
+        {
+            //TODO: wciągnac listę tabel
+            return $this->tableName = $value;
+        }
+
     }
