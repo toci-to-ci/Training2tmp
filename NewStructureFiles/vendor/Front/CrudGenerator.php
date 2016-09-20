@@ -4,6 +4,7 @@
 	
 	use ORM\DbHandle\MySql\MySqlDbHandle;
 	use ORM\DbQueries\Insert\PostgreSqlInsert;
+	use ORM\DbModel\DbList;
 
 	class CrudGenerator
 	{
@@ -12,6 +13,8 @@
 		public function GenerateForm($model)
 		{
 			$fields = $model->GetFields();
+			
+			//var_dump($fields);
 			
 			$result = '<form method="POST" action="'.$_SERVER['PHP_SELF'].'"><div>';
 			$result .= Controls::AddHidden(self::MODEL_TYPE, get_class($model));
@@ -35,9 +38,15 @@
 		{
 			if ($_SERVER['REQUEST_METHOD'] == "POST")
 			{
-				$model = new $_POST[self::MODEL_TYPE];
+				//$model = new $_POST[self::MODEL_TYPE];
 				
 				//var_dump($model);
+				
+				$dbList = new DbList("db_toci", "users");
+				
+				$model = $dbList->GetModel();
+				
+				
 				
 				foreach ($_POST as $key => $value)
 				{
