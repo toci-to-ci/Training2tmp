@@ -23,6 +23,16 @@ interface IDbField
 
 
 }
+
+//zbiera z jsona listę tabel dla danej bazy
+//config do tworzenia AutoModel.php
+interface IDBlist
+{
+    public function GetDbList();
+
+
+}
+
 //4.a
 interface IDbModel
 {

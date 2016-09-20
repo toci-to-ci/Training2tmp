@@ -16,4 +16,9 @@ abstract class DbHadle implements IDbHandle
         $this->password=$password;
         $this->host=$host;
     }
+
+
+
+
+
 }
