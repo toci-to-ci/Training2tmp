@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: text/html; charset=utf-8');
 
 //require_once './Databases/DbLists.json';
 //require_once '../Interfaces/DbInterfaces.php';
@@ -37,6 +38,82 @@
         public function GetTableFieldsList()
         {
 
+            //if(isset($this->dblist['dbName']['db_toci']['users']))
+            if(isset($this->dblist['dbName'][$this->activeDb][$this->activeTable]))
+            {
+
+                return $this->activeFields = $this->dblist['dbName'][$this->activeDb][$this->activeTable];
+            }
+            else
+            {
+                echo "dupa";
+            }
+
+
+//
+//
+//            foreach ($this->dblist as $item => $val) {
+//
+//                foreach ($val as $item => $val) {
+//                    //echo ' - ' . $item . '<br>';
+//
+//                    if($item === 'db_toci') {
+//                        echo '- '.$item.'<br>';
+//
+//                        foreach ($val as $item => $val) {
+//                             echo ' -- ' . $item . '<br>';
+//
+//                            if ($item === 'users') {
+//
+//                                foreach ($val as $item => $val) {
+//                                    echo ' --- ' . $item . ' => ' . $val . '<br>';
+//
+//
+//                                }
+//                            }
+//
+//                        }
+//
+//
+//                    }
+//                }
+//
+//                echo "-------------------------------------<br>";
+//
+//                foreach ($this->dblist as $key => $value)
+//                {
+//                    foreach ($value as $key => $value)
+//                    {
+//                        if($key == "db_toci") //??
+//                        {
+//                            foreach ($value as $key => $value)
+//                            {
+//                                if($key == "users")
+//                                {
+//                                    echo $key;
+//                                }
+//                            }
+//                        }
+//
+//                    }
+//                 }
+
+
+
+
+            /*
+                if ($item == 'db_toci') {
+                    echo "<br>";
+                    print_r ($val);
+                    echo "<br>";
+                    print_r ($item);
+                }else
+                {
+                    echo "<br>""<br>".'poza';
+                }*/
+
+         //   }
+
 
 //            searchForId($this->activeDb ,$this->activeTable, $this->dblist);
 //
@@ -71,7 +148,7 @@
             echo 'activeDb: '.$this->activeDb.'<br>';
             echo 'activeTable: '.$this->activeTable.'<br>';
             echo 'listOfTableFields: '.'<pre>';
-            echo print_r($this->activeFields);
+            echo print_r($this->GetTableFieldsList());
             echo '<pre>';
         }
 
