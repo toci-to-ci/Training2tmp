@@ -29,7 +29,11 @@ abstract class SqlCommon implements ISqlCommon
         //$fieldValue to nasz IDbField
         foreach ($fields as $fieldKey => $fieldValue)
         {
-            if ($fieldValue->HasValue()) {
+//            if ($fieldValue->HasValue() ) {
+//                $names[] =  $fieldValue->GetFieldName();
+//            }
+
+                        if ($fieldValue->HasValue() && strlen($fieldValue->GetValue()) > 0) {
                 $names[] =  $fieldValue->GetFieldName();
             }
 
@@ -47,13 +51,24 @@ abstract class SqlCommon implements ISqlCommon
         //$fieldValue to nasz IDbField
         foreach ($fields as $fieldKey => $fieldValue)
         {
-            if ($fieldValue->HasValue()) {
+//            if ($fieldValue->HasValue()) {
+//
+//            //  var_dump($fieldValue->GetType());
+//            $values[] = $this->surroundings[$fieldValue->GetType()] .
+//                $fieldValue->GetValue() .
+//                $this->surroundings[$fieldValue->GetType()];
+//        }
+
+
+            if ($fieldValue->HasValue() && strlen($fieldValue->GetValue()) > 0 ) {
 
                 //  var_dump($fieldValue->GetType());
                 $values[] = $this->surroundings[$fieldValue->GetType()] .
                     $fieldValue->GetValue() .
                     $this->surroundings[$fieldValue->GetType()];
             }
+
+
 
         }
 

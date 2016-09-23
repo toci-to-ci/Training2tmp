@@ -1,6 +1,6 @@
 <?php
       class PostgreSqlInsert extends DbInsert
-    {
+      {
 
 
      public function SqlCommon (IDbModel $model)

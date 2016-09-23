@@ -31,7 +31,8 @@ class DbModel implements IDbModel
 
         public function HasField($fieldName)
         {
-            return isset($this->fields[$fieldName]);
+            return (isset($this->fields[$fieldName]) );
+            //&& strlen($this->fields[$fieldName]->GetValue()) > 0
         }
 
 
